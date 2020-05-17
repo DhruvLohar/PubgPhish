@@ -1,2 +1,2 @@
 # PubgPhish
-PubgPhish : Simple PUBG Phishing tool
+Simple PUBG Phishing tool

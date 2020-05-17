@@ -61,7 +61,13 @@ def see_pass():
 			exit()
 	else:
 		print(f"{Red}[!] No Credentials Were Fetched Yet!{Reset}")
-		start()
+		choice = input(f"{Blue}Return To Main Menu[Y/N] : {Reset}")
+		
+		if choice == "Y" or choice == "y":
+			start()
+		else:
+			print(f"{Yellow}Exiting...{Reset}")
+			exit()
 
 def start():
 	banner()

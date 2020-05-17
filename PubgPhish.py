@@ -52,8 +52,16 @@ def see_pass():
 	if os.path.isfile("core/Password.txt"):
 		os.chdir("core/")
 		os.system("cat Password.txt")
+		option = input(f"{Blue}Return To Main Menu[Y/N] : {Reset}")
+		
+		if option == "Y" or option == "y":
+			start()
+		else:
+			print(f"{Yellow}Exiting...{Reset}")
+			exit()
 	else:
-		print(f"{Red}[!] No Passwords Were Fetched Yet!{Red}")
+		print(f"{Red}[!] No Passwords Were Fetched Yet!{Reset}")
+		start()
 
 def start():
 	banner()

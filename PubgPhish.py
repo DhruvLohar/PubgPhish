@@ -60,7 +60,7 @@ def see_pass():
 			print(f"{Yellow}Exiting...{Reset}")
 			exit()
 	else:
-		print(f"{Red}[!] No Passwords Were Fetched Yet!{Reset}")
+		print(f"{Red}[!] No Credentials Were Fetched Yet!{Reset}")
 		start()
 
 def start():
@@ -68,7 +68,7 @@ def start():
 
 	print(f"{Red}[1] Run Server Over Localhost{Reset}")
 	print(f"{Red}[2] Run Server Over Internet{Reset}")
-	print(f"{Red}[3] See Passwords{Reset}")
+	print(f"{Red}[3] See Credentials{Reset}")
 	print(f"{Red}[4] Exit{Reset}")
 
 	option = input(f"{Red}Select[1/2/3/4] : {Reset}")

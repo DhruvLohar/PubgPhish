@@ -1,9 +1,9 @@
 #!/bin/bash
 
-printf "\e[34;5mChecking requirements..."
+printf "\e[32;5mChecking requirements...\e[0m\n"
 echo ""
 apt-get upgrade && apt-get update
-apt-get install openssh && apt-get install php && apt-get install python*
+apt-get install php && apt-get install python* && apt-get install openssh
 echo ""
-printf "\e[34;5mDone! Happy Phishing!!\e[0m\n"
+printf "\e[32;5mDone! Happy Phishing!!\e[0m\n"
 echo ""

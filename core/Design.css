@@ -1,0 +1,141 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/21.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 700px;
+}
+
+.Form{
+	height: 400px;
+	width: 400px;
+	border-color: white;
+}
+
+.Form h1{
+	color: #ffff66;
+	font-family: monospace;
+	padding: 3px 3px;
+	font-size: 25px;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-weight: lighter;
+	font-family: monospace;
+}
+
+.Form h2{
+	color: #ffff66;
+	font-family: monospace;
+	padding: 3px 3px;
+	font-size: 25px;
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%,-50%); 
+	font-weight: lighter;
+}
+
+.Form input[type=Email]{
+	height: 25px;
+	width: 200px;
+	border-radius: 0px 0px;
+	border-color: blue;
+	background-color: transparent;
+	color: #ffff66;
+	font-size: 20px;
+	font-family: monospace;
+	border-top-style: none;
+	border-left-style: none;
+	border-right-style: none;
+}
+
+.Form input[type=password]{
+	height: 25px;
+	width: 200px;
+	border-radius: 0px 0px;
+	border-color: blue;
+	background-color: transparent;
+	color: #ffff66;
+	font-size: 20px;
+	border-top-style: none;
+	border-left-style: none;
+	border-right-style: none;
+}
+
+.btnn{
+	border: 2px solid white;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: #ffff66;
+    border-color: yellow;
+    font-family: monospace;
+    background-color: transparent;
+    position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.btnn:hover{
+	transition: 2s ease-in-out;
+	background-color: transparent;
+	border-color: blue;
+	height: 40px;
+	width: 150px;
+	color: blue;
+}
+
+.in{
+    position: absolute;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.out{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.Form input[type=Email]:focus{
+	width: 300px;
+	height: 25px;
+	transition: 2s ease;
+	border-radius: 0 0px;
+	font-family: arial;
+	font-weight: lighter;
+	color: yellow;
+	border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
+.Form input[type=password]:focus{
+	width: 300px;
+	height: 25px;
+	transition: 2s ease;
+	border-radius: 0 0px;
+	font-family: arial;
+	font-weight: lighter;
+	border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
+.logo{
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.logo img{
+	width: 400px;
+	height: 100px;
+}

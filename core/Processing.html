@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Processing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Bungee Shade' rel='stylesheet'>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+</head>
+<style>
+#logo {
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 5px 5px;
+}
+    
+body {
+	background-color: black;
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../images/24.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 700px;
+  width: 100%;
+}
+ 
+#myProgress {
+  width: 300px;
+  background-color: grey;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 5px;
+  box-shadow: 3px 3px 20px yellow;
+}
+
+#myBar {
+  width: 10%;
+  height: 20px;
+  background-color: #ccff00;
+  text-align: center;
+  line-height: 20px;
+  color: blue;
+  border-radius: 5px;
+  margin: 3px 2px;
+}
+
+#circle {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 150px;
+    height: 150px;
+    display: none;  
+}
+
+.loader {
+  width: calc(100% - 0px);
+  height: calc(100% - 0px);
+  border: 8px solid #162534;
+  border-top: 8px solid #09f;
+  border-radius: 50%;
+  animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+} 
+
+#text {
+   margin: 3px 3px;
+   color: green;
+   font-family: sans-serif;
+   opacity: 1;
+   animation: type 5s steps(50, end);
+}
+@keyframes change {
+        0% {
+        
+        color: yellow;
+      }
+      
+      10% {
+        
+        color: #8e44ad;
+      }
+      
+      20% {
+        
+        color: #1abc9c;
+      }
+      
+      30% {
+        
+        color: #d35400;
+      }
+      
+      40% {
+        
+        color: blue;
+      }
+      
+      50% {
+        
+        color: yellow;
+      }
+      
+      60% {
+        
+        color: blue;
+      }
+      
+      70% {
+        
+        color: #2980b9;
+      }
+      80% {
+     
+        color: #f1c40f;
+      }
+      
+      90% {
+     
+        color: #2980b9;
+      }
+      
+      100% {
+        
+        color: pink;
+      }
+}
+
+#font {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 30px;
+  font-family: 'Bungee Shade';
+  color: #ccff00;
+  animation-name: change;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  text-shadow: 3px 3px 10px black;
+}
+.container {
+  position: relative;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%,-50%);
+  font-family: Consolas, monospace;  
+  display: none;
+}
+
+.typing {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  z-index: -1;
+}
+
+.hiders {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.hiders p {
+  position: relative; 
+  clear: both; 
+  margin: 0;
+  float: right; 
+  width:0; 
+  background: black;
+  animation: typing 2s steps(27, end);
+  animation-fill-mode: both; 
+}
+  
+.hiders p:nth-child(2) {
+  animation-delay: 2s;
+}
+.hiders p:nth-child(3) {
+  animation-delay: 4s;
+}
+.hiders p:nth-child(4) {
+  animation-delay: 6s;
+}
+.hiders p:nth-child(5) {
+  animation-delay: 8s;
+}
+.hiders p:nth-child(6) {
+  animation-delay: 10s;
+}
+.hiders p:nth-child(7) {
+  animation-delay: 12s;
+}
+.hiders p:nth-child(8) {
+  animation-delay: 14s;
+}
+.hiders p:nth-child(9) {
+  animation-delay: 16s;
+}
+.hiders p:nth-child(10) {
+  animation-delay: 18s;
+}
+.hiders p:nth-child(11) {
+  animation-delay: 20s;
+}
+#input-box {
+    box-sizing: border-box;
+    border: 2px solid white;
+    background-color: black;
+    border-spacing: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 2px 2px 20px green;
+}
+@keyframes typing {
+    from { width: 100% }
+    to { width: 0 }   
+}
+#Next {
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+}
+#btnn {
+    background-color: transparent;
+    border-color: yellow;
+    border-radius: 8px;
+    padding: 10px 24px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    color: yellow;
+    border-width: 2px;
+}
+</style>
+<body>
+<div>
+   <img src="../images/logo.png" id="logo">
+</div>
+
+<div id="circle" onloadstart="My_Function()">
+            <div class="loader">
+             <div class="loader">
+              <div class="loader">
+               <div class="loader">
+                <div class="loader">  
+                </div>
+               </div>
+              </div>
+            </div>
+          </div>
+     </div> 
+     
+<p id="font">Searching...</p>
+<div id="myProgress">
+  <div id="myBar">10%</div>
+</div>
+<div class="container" id="cont">
+  <p class="typing" style="color:yellow;background-color:black;border: 2px solid white;">
+    Processing.....            <br>
+    Exploiting into server.... <br>
+    Preaching the database....<br>
+    Exploiting into Server.... <br>
+    Searching for User...      <br>
+    User found!!!              <br>
+    Establishing Connection..  <br>
+    Generating BP...           <br>
+    Generating UC...           <br>
+    Transfering packets...     <br>
+    Done!                      <br>
+  </p>
+
+  <div class="hiders">
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+  </div>
+</div>
+<div style="clear:both;"></div>
+       <div id="Next">
+        <button type="submit" id="btnn" onclick="window.location.href = '../Loginpage.php';">Continue</button>
+       </div>
+<script>
+  var elem = document.getElementById("myBar");   
+  var width = 10;
+  var id = setInterval(frame, 100);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+      document.getElementById('myProgress').style.display = "none";
+      document.getElementById('circle').style.display = "initial";
+      document.getElementById('font').style.display = "none";
+      document.getElementById('cont').style.display = "block";
+      document.getElementById('Next').style.display = "initial";
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+      elem.innerHTML = width * 1  + '%';
+    }
+  }
+  document.getElementById("btnn").style.display = "none";
+    setTimeout(function() {
+        document.getElementById("btnn").style.display = "initial";
+    }, 30000);
+</script>
+</body>
+</html>

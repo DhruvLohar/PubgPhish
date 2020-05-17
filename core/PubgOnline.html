@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PUBG Generator</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css">
+	<!-- Styling goes here -->
+	<style type="text/css">
+		*{
+			padding: 0px;
+			margin: 0px;
+		}
+		body {
+			background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/20.jpg);
+			background-position: center;
+			background-size: cover;
+			height: 720px;
+		}
+		#logo img{
+			width: 100%;
+			height: 150px;
+			position: absolute;
+	        top: 10%;
+	        left: 50%;
+	        transform: translate(-50%,-50%);
+	        padding: 5px 5px;
+		}
+		#User {
+			position: absolute;
+	        top: 30%;
+	        left: 50%;
+	        transform: translate(-50%,-50%);
+		}
+		#User h1 {
+			font-family: monospace;
+			margin: 2px 2px;
+			margin-bottom: 5px;
+			color: yellow;
+			font-weight: lighter;
+			font-size: 30px;
+			text-align: center;
+		}
+		#User input[ type = "text" ]{
+			width: 200px;
+			height: 30px;
+			border-color: #9ecaed;
+			box-shadow: 0 0 10px #9ecaed;
+            font-size: 20px;
+            margin-bottom: 5px;
+            margin-top: 10px;
+            border-radius: 4px;
+            background-color: transparent;	
+            color: yellow;
+            border-top: 0px;
+            border-right: 0px;
+            font-family: monospace;
+            font-weight: lighter;
+		}
+		#platform p {
+			font-family: monospace;
+			position: absolute;
+			top: 45%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			color: yellow;
+			font-size: 19px;
+			font-weight: lighter;
+			margin-top: 5px;
+			margin-bottom: 10px;
+			text-align: center;
+		}
+		#platform #And {
+			position: absolute;
+			top: 55%;
+			left: 30%;
+			transform: translate(-50%,-50%);
+			font-size: 50px;
+			color: grey;
+			margin: 2px 2px;
+		}
+		#platform button {
+			position: absolute;
+			top: 63%;
+			left: 30%;
+			transform: translate(-50%,-50%);
+			border: 1px transparent;
+            background-color: transparent;
+            padding: 5px 10px;
+            color: yellow;
+            font-weight: lighter;
+            font-family: monospace;
+		}
+		#platform #Ios {
+           position: absolute;
+           top: 55%;
+           left: 70%;
+           transform: translate(-50%,-50%);
+           font-size: 50px;
+           margin: 2px 2px;
+           color: grey;
+		} 
+		#platform .Io {
+			position: absolute;
+			top: 63%;
+			left: 70%;
+			transform: translate(-50%,-50%);
+			border: 1px transparent;
+			background-color: transparent;
+			padding: 5px 10px;
+			color: yellow;
+			font-family: monospace;
+			font-weight: lighter;
+		}
+		#platform #Windows {
+			position: absolute;
+			top: 70%;
+			left: 30%;
+			transform: translate(-50%,-50%);
+			color: grey;
+			font-size: 50px;
+			margin: 2px 2px;
+		}
+		#platform .Wi {
+			position: absolute;
+			top: 78%;
+			left: 30%;
+			transform: translate(-50%,-50%);
+			border: 1px transparent;
+			background-color: transparent;
+			padding: 5px 10px;
+			color: yellow;
+			font-family: monospace;
+			font-weight: lighter;
+		}
+		#platform #X {
+			position: absolute;
+			top: 70%;
+			left: 70%;
+			transform: translate(-50%,-50%);
+			font-size: 50px;
+			color: grey;
+			margin: 2px 2px;
+		}
+		#platform .Xbox {
+			position: absolute;
+			top: 78%;
+			left: 70%;
+			transform: translate(-50%,-50%);
+			border: 1px transparent;
+			background-color: transparent;
+			padding: 5px 10px;
+			color: yellow;
+			font-family: monospace;
+			font-weight: lighter; 
+		}
+		#sub_btn {
+			position: absolute;
+			top: 90%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			width: 120px;
+			height: 40px;
+			background-color: transparent;
+			text-decoration: none;
+			color: yellow;
+			font-family: monospace;
+			font-weight: lighter;
+		}		
+	</style>
+	<!-- Javascript goes here -->
+	<script type="text/javascript">
+		function SelectAn(){
+            document.getElementById('And').style.color = "yellow";
+            document.getElementById('Ios').style.color = "";
+            document.getElementById('Windows').style.color = "";
+            document.getElementById('X').style.color = "";
+		}
+		function SelectIo(){
+			document.getElementById('Ios').style.color = "yellow";
+			document.getElementById('And').style.color = "";
+			document.getElementById('Windows').style.color = "";
+            document.getElementById('X').style.color = "";
+		}
+		function SelectWin(){
+			document.getElementById('Windows').style.color = "yellow";
+			document.getElementById('Ios').style.color = "";
+			document.getElementById('And').style.color = "";
+            document.getElementById('X').style.color = "";
+		}
+		function SelectX(){
+            document.getElementById('X').style.color = "yellow";
+            document.getElementById('Ios').style.color = "";
+			document.getElementById('And').style.color = "";
+			document.getElementById('Windows').style.color = "";
+		}
+		function check() {
+			user = document.getElementById('user-in').value;
+			if (user == "") {
+				alert("Enter a valid username!");
+				return false;
+			} else {
+				location.href = "/Generator.html/"
+			}
+		}
+	</script>
+</head>
+<body>
+       <div id="logo">
+       	<img src="../images/logo.png">
+       </div>
+
+       <div id="User">
+       	<h1>USERNAME</h1>
+       	<input type="text" name="User" id="user-in" placeholder="Username.." required minlength="20">
+       </div>
+
+       <div id="platform">
+       	 <p>Select Platform</p>
+       	 <i id="And" class="fab fa-android" onclick="SelectAn()"></i>
+       	 <button onclick="SelectAn()" id="android">Android</button>
+       	 <i id="Ios" class="fab fa-apple" onclick="SelectIo()"></i>
+       	 <button onclick="SelectIo()" class="Io">IOS</button>
+       	 <i id="Windows" class="fab fa-windows" onclick="SelectWin()"></i>
+       	 <button onclick="SelectWin()" class="Wi">Windows</button>
+       	 <i id="X" class="fab fa-xbox" onclick="SelectX()"></i>
+       	 <button onclick="SelectX()" class="Xbox">XBOX</button>
+       </div> 
+
+       <div>
+       	<button id="sub_btn" onclick="check()">Continue</button>
+       </div>
+</body>
+</html>

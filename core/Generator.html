@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Generator</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<!-- Styling -->
+	<style type="text/css">
+		*{
+			padding: 0px;
+			margin: 0px;
+		}
+		#logo img{
+			width: 100%;
+			height: 150px;
+			position: absolute;
+	        top: 10%;
+	        left: 50%;
+	        transform: translate(-50%,-50%);
+	        padding: 5px 5px;
+		}
+		body {
+			background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/22.jpg);
+			background-position: center;
+			background-size: cover;
+			height: 720px;
+		}
+		#Res p{
+			position: absolute;
+			top: 30%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			font-size: 23px;
+			font-family: monospace;
+			color: yellow;
+			font-weight: lighter;
+			text-align: center;
+		}
+		#Res #BP{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			font-family: monospace;
+			font-size: 30px;
+			border: 2px solid white;
+			margin: 2px 2px;
+			padding: 5px 5px;
+			border-radius: 5px;
+		}
+		#Res #BP-{
+			position: absolute;
+			top: 50%;
+			left: 15%;
+			transform: translate(-50%,-50%);
+			font-size: 20px;
+			border: 2px solid white;
+			margin: 2px 2px;
+			padding: 5px 10px;
+			color: yellow;
+			font-family: monospace;
+			font-weight: lighter;
+			background-color: transparent;
+			border-radius: 5px;
+		}
+		#Res #BPP{
+            position: absolute;
+			top: 50%;
+			left: 85%;
+			transform: translate(-50%,-50%);
+			font-size: 20px;
+			border: 2px solid white;
+			margin: 2px 2px;
+			padding: 5px 10px;
+			color: yellow;
+			font-family: monospace;
+			font-weight: lighter;
+			background-color: transparent;
+			border-radius: 5px;
+		}
+		#Res #UC{
+			position: absolute;
+			top: 70%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			font-family: monospace;
+			font-size: 30px;
+			border: 2px solid white;
+			margin: 2px 2px;
+			padding: 5px 5px;
+			border-radius: 5px;
+		}
+		#Res #UC-{
+			position: absolute;
+			top: 70%;
+			left: 15%;
+			transform: translate(-50%,-50%);
+			font-size: 20px;
+			border: 2px solid white;
+			margin: 2px 2px;
+			padding: 5px 10px;
+			color: yellow;
+			font-family: monospace;
+			font-weight: lighter;
+			background-color: transparent;
+			border-radius: 5px;
+		}
+		#Res #UCP{
+			position: absolute;
+			top: 70%;
+			left: 85%;
+			transform: translate(-50%,-50%);
+			font-size: 20px;
+			border: 2px solid white;
+			margin: 2px 2px;
+			padding: 5px 10px;
+			color: yellow;
+			font-family: monospace;
+			font-weight: lighter;
+			background-color: transparent;
+			border-radius: 5px;
+		}
+		#Res #BPimg {
+			position: absolute;
+			top: 40%;
+			left: 35%;
+			transform: translate(-50%,-50%);
+			width: 50px;
+			height: 50px;
+		}
+		#Res #BPtext {
+			position: absolute;
+			top: 40%;
+			left: 60%;
+			transform: translate(-50%,-50%);
+			font-size: 15px;
+			font-family: monospace;
+			color: yellow;
+		}
+		#Res #UCimg {
+			position: absolute;
+			top: 60%;
+			left: 35%;
+			transform: translate(-50%,-50%);
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+		}
+		#Res #UCtext {
+			position: absolute;
+			top: 60%;
+			left: 60%;
+			transform: translate(-50%,-50%);
+			font-size: 15px;
+			font-family: monospace;
+			color: yellow;
+		}
+		#ucProgress {
+			width: 200px;
+  			background-color: grey;
+  			position: absolute;
+  			top: 70%;
+  			left: 50%;
+  			transform: translate(-50%,-50%);
+  			border-radius: 5px;
+  			box-shadow: 3px 3px 10px yellow;
+		}
+		#ucBar {
+			width: 10%;
+  			height: 20px;
+  			background-color: black;
+  			text-align: center;
+  			line-height: 20px;
+  			color: yellow;
+  			border-radius: 5px;
+  			margin: 3px 2px;
+		}
+		#bpProgress {
+			width: 200px;
+  			background-color: grey;
+  			position: absolute;
+  			top: 50%;
+  			left: 50%;
+  			transform: translate(-50%,-50%);
+  			border-radius: 5px;
+  			box-shadow: 3px 3px 10px yellow;
+		}
+		#bpBar {
+			width: 10%;
+  			height: 20px;
+  			background-color: black;
+  			text-align: center;
+  			line-height: 20px;
+  			color: yellow;
+  			border-radius: 5px;
+  			margin: 3px 2px;
+		}
+		#RP p {
+			position: absolute;
+			top: 85%;
+			left: 35%;
+			transform: translate(-50%,-50%);
+			font-family: monospace;
+			font-size: 20px;
+			font-weight: bolder;
+			color: yellow;
+		}
+		.switch {
+        	position: relative;
+  			display: inline-block;
+  			width: 70px;
+  			height: 34px;
+		}
+		#switch {
+			position: absolute;
+  			top: 85%;
+  			left: 70%;
+  			transform: translate(-50%,-50%);			
+		}
+		.switch input { 
+  			opacity: 0;
+  			width: 0;
+  			height: 0;
+		}
+		.slider {
+  			position: absolute;
+  			cursor: pointer;
+  			top: 0;
+  			left: 0;
+  			right: 0;
+  			bottom: 0;
+  			background-color: #ccc;
+  			transition: .4s;
+		}
+		.slider:before {
+  			position: absolute;
+  			content: "";
+  			height: 26px;
+  			width: 26px;
+  			left: 4px;
+  			bottom: 4px;
+  			background-color: white;
+  			transition: .4s;
+		}
+		input:checked + .slider {
+ 	    	background-color: black;
+		}
+		input:focus + .slider {
+  			box-shadow: 0 0 1px #2196F3;
+		}
+		input:checked + .slider:before {
+  			transform: translateX(36px);
+		}
+		#Next {
+           position: absolute;
+           top: 100%;
+           left: 50%;
+           transform: translate(-50%,-50%);
+		}
+		#Next #Gen a {
+			text-decoration: none;
+			border: 2px solid white;
+			background-color: transparent;
+			color: yellow;
+			padding: 5px 30px;
+			font-size: 20px;
+			margin: 2px 2px;
+			border-radius: 5px;
+		}
+	</style>
+	<!-- JavaScrip -->
+	<script type="text/javascript">
+ 		 var val = 10;
+
+         function BPAdd() {
+     		var elem = document.getElementById('bpBar');	
+
+         	if (val != 100) {
+         		val += 10;
+         		elem.style.width = val + '%';
+         		elem.innerHTML = val * 1000 + 'BP';
+         	}
+         }
+         function BPSub() {
+         	var elem = document.getElementById('bpBar');	
+
+         	if (val != 0) {
+         		val -= 10;
+         		elem.style.width = val + '%';
+         		elem.innerHTML = val * 1000 + 'BP';
+         	}
+         }
+         function UCAdd() {
+         	var elem = document.getElementById('ucBar');	
+
+         	if (val != 100) {
+         		val += 10;
+         		elem.style.width = val + '%';
+         		elem.innerHTML = val * 1000 + 'UC';
+         	}
+         }
+
+         function UCSub() {
+         	var elem = document.getElementById('ucBar');	
+
+         	if (val != 0) {
+         		val -= 10;
+         		elem.style.width = val + '%';
+         		elem.innerHTML = val * 1000 + 'UC';
+         	}
+         }
+	</script>
+</head>
+<body>
+       <div id="logo">
+       	<img src="../images/logo.png">
+       </div>
+       <div id="Res">
+       	<p>Select Amount</p>
+
+       <div class="BPGEN">
+       	<img src="../images/BP.png" id="BPimg">
+       	<p id="BPtext">Battle Points</p>
+       	<button id="BP-" onclick="BPSub()">-</button>
+       		<div id="bpProgress">
+  				<div id="bpBar">10000</div>
+			</div>
+       	<button id="BPP" onclick="BPAdd()">+</button>
+       </div>
+
+       <div class="UCGEN">
+       		<img src="../images/gold.png" id="UCimg">
+       		<p id="UCtext">Unknown Cash</p>
+       		<button id="UC-" onclick="UCSub()">-</button>
+       		<div id="ucProgress">
+  				<div id="ucBar">10000</div>
+			</div>
+       		<button id="UCP" onclick="UCAdd()">+</button>
+       </div>
+
+       </div>
+       <div id="RP">
+       	<p>Royale Pass : </p>
+       	<label class="switch" id="switch">
+               <input type="checkbox">
+               <span class="slider"></span>
+        </label>
+       </div>
+       <div id="Next">
+       	<li id="Gen"><a href="../Processing.html">Generate</a></li>
+       </div>
+</body>
+</html>

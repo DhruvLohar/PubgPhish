@@ -70,26 +70,32 @@ def see_pass():
 			exit()
 
 def start():
-	banner()
+	try:
+		os.system("clear")
 
-	print(f"{Red}[1] Run Server Over Localhost{Reset}")
-	print(f"{Red}[2] Run Server Over Internet{Reset}")
-	print(f"{Red}[3] See Credentials{Reset}")
-	print(f"{Red}[4] Exit{Reset}")
+		banner()
 
-	option = input(f"{Red}Select[1/2/3/4] : {Reset}")
+		print(f"{Red}[1] Run Server Over Localhost{Reset}")
+		print(f"{Red}[2] Run Server Over Internet{Reset}")
+		print(f"{Red}[3] See Credentials{Reset}")
+		print(f"{Red}[4] Exit{Reset}")
 
-	if option == "1":
-		local()
-	elif option == "2":
-		over_wan()
-	elif option == "3":
-		see_pass()
-	elif option == "4":
+		option = input(f"{Red}Select[1/2/3/4] : {Reset}")
+
+		if option == "1":
+			local()
+		elif option == "2":
+			over_wan()
+		elif option == "3":
+			see_pass()
+		elif option == "4":
+			print(f"{Yellow}Exiting...{Reset}")
+			exit()
+		else:
+			pass
+	except KeyboardInterrupt:
 		print(f"{Yellow}Exiting...{Reset}")
 		exit()
-	else:
-		pass
 
 
 if __name__ == '__main__':
